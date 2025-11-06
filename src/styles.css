@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('./assets/default-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.clock {
+  width: 50vw;
+  height: 40vh;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.time {
+  font-size: 80px;
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  -webkit-text-stroke: 1px #ebebeb;
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-color: #ebebeb86;
+}
+
+.date {
+  font-size: 24px;
+  color: #ebebeb;
+}
+
+.change-bg-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.change-bg-btn:hover {
+  color: rgb(79, 79, 79);
+  background: rgba(255, 255, 255, 0.707);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
