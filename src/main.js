@@ -55,3 +55,28 @@ const changeBgBtn = document.getElementById('change-bg-btn');
 changeBgBtn.addEventListener('click', selectBackgroundImage);
 
 loadBingBackground();
+
+const clock = document.querySelector('.clock');
+
+let isDragging = false;
+let offsetX, offsetY;
+
+clock.addEventListener('mousedown', (event) => {
+  event.preventDefault(); // Prevent text selection during drag
+  isDragging = true;
+  offsetX = event.clientX - clock.offsetLeft;
+  offsetY = event.clientY - clock.offsetTop;
+  clock.style.cursor = 'grabbing';
+});
+
+document.addEventListener('mousemove', (event) => {
+  if (isDragging) {
+    clock.style.left = `${event.clientX - offsetX}px`;
+    clock.style.top = `${event.clientY - offsetY}px`;
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  isDragging = false;
+  clock.style.cursor = 'grab';
+});
